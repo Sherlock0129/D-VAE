@@ -3,7 +3,7 @@ import torch
 import torch.nn as nn
 import torchvision
 
-from . import DenseNet, ResNet, ToyModel, inception_resnet_v1, resnet
+from . import DenseNet, ResNet, ToyModel, inception_resnet_v1, resnet_official
 
 mlconfig.register(torch.optim.SGD)
 mlconfig.register(torch.optim.Adam)
@@ -37,7 +37,7 @@ mlconfig.register(torchvision.models.mobilenet_v2)
 mlconfig.register(torchvision.models.vit_b_16)
 # torchvision models
 # mlconfig.register(torchvision.models.resnet18)
-mlconfig.register(resnet.resnet18)
+mlconfig.register(resnet_official.resnet18)
 # mlconfig.register(torchvision.models.resnet50)
 # mlconfig.register(torchvision.models.densenet121)
 
