@@ -1,0 +1,447 @@
+2024-11-23 22:43:50,513 PyTorch Version: 2.5.1+cpu
+2024-11-23 22:51:12,949 PyTorch Version: 2.5.1+cpu
+2024-11-23 22:51:12,951 num_classes: 10
+2024-11-23 22:51:12,952 epochs: 60
+2024-11-23 22:51:12,952 grad_clip: 5.0
+2024-11-23 22:51:12,952 log_frequency: 100
+2024-11-23 22:51:12,952 model: {'name': 'ResNet18', 'num_classes': 10}
+2024-11-23 22:51:12,952 criterion: {'name': 'CrossEntropyLoss'}
+2024-11-23 22:51:12,952 optimizer: {'name': 'SGD', 'lr': 0.1, 'weight_decay': 0.0005, 'momentum': 0.9}
+2024-11-23 22:51:12,952 scheduler: {'name': 'CosineAnnealingLR', 'T_max': '$epochs', 'eta_min': 0.0}
+2024-11-23 22:51:12,952 dataset: {'name': 'DatasetGenerator', 'train_batch_size': 128, 'eval_batch_size': 128}
+2024-11-23 22:51:12,952 seed: 0
+2024-11-23 22:51:12,953 version: resnet18
+2024-11-23 22:51:12,953 exp_name: test_exp
+2024-11-23 22:51:12,953 config_path: configs/cifar10
+2024-11-23 22:51:12,953 load_model: False
+2024-11-23 22:51:12,953 data_parallel: False
+2024-11-23 22:51:12,953 train: False
+2024-11-23 22:51:12,953 save_frequency: -1
+2024-11-23 22:51:12,953 train_face: False
+2024-11-23 22:51:12,953 train_portion: 1.0
+2024-11-23 22:51:12,953 train_batch_size: 128
+2024-11-23 22:51:12,953 eval_batch_size: 256
+2024-11-23 22:51:12,953 num_of_workers: 8
+2024-11-23 22:51:12,953 train_data_type: CIFAR10
+2024-11-23 22:51:12,954 test_data_type: CIFAR10
+2024-11-23 22:51:12,954 train_data_path: ../datasets
+2024-11-23 22:51:12,954 test_data_path: ../datasets
+2024-11-23 22:51:12,954 perturb_type: classwise
+2024-11-23 22:51:12,954 patch_location: center
+2024-11-23 22:51:12,954 poison_rate: 1.0
+2024-11-23 22:51:12,954 perturb_tensor_filepath: None
+2024-11-23 22:51:12,954 identity: race
+2024-11-23 22:51:12,954 jpeg: False
+2024-11-23 22:51:12,954 bdr: False
+2024-11-23 22:51:12,954 grayscale: False
+2024-11-23 22:51:12,954 poison_idxs_filepath: None
+2024-11-23 22:56:15,429 PyTorch Version: 2.5.1+cpu
+2024-11-23 22:56:15,432 num_classes: 10
+2024-11-23 22:56:15,433 epochs: 60
+2024-11-23 22:56:15,433 grad_clip: 5.0
+2024-11-23 22:56:15,433 log_frequency: 100
+2024-11-23 22:56:15,433 model: {'name': 'ResNet18', 'num_classes': 10}
+2024-11-23 22:56:15,433 criterion: {'name': 'CrossEntropyLoss'}
+2024-11-23 22:56:15,433 optimizer: {'name': 'SGD', 'lr': 0.1, 'weight_decay': 0.0005, 'momentum': 0.9}
+2024-11-23 22:56:15,433 scheduler: {'name': 'CosineAnnealingLR', 'T_max': '$epochs', 'eta_min': 0.0}
+2024-11-23 22:56:15,433 dataset: {'name': 'DatasetGenerator', 'train_batch_size': 128, 'eval_batch_size': 128}
+2024-11-23 22:56:15,434 seed: 0
+2024-11-23 22:56:15,434 version: resnet18
+2024-11-23 22:56:15,434 exp_name: test_exp
+2024-11-23 22:56:15,434 config_path: configs/cifar10
+2024-11-23 22:56:15,434 load_model: False
+2024-11-23 22:56:15,434 data_parallel: False
+2024-11-23 22:56:15,434 train: False
+2024-11-23 22:56:15,434 save_frequency: -1
+2024-11-23 22:56:15,434 train_face: False
+2024-11-23 22:56:15,434 train_portion: 1.0
+2024-11-23 22:56:15,434 train_batch_size: 128
+2024-11-23 22:56:15,434 eval_batch_size: 256
+2024-11-23 22:56:15,434 num_of_workers: 8
+2024-11-23 22:56:15,434 train_data_type: CIFAR10
+2024-11-23 22:56:15,434 test_data_type: CIFAR10
+2024-11-23 22:56:15,434 train_data_path: ../datasets
+2024-11-23 22:56:15,434 test_data_path: ../datasets
+2024-11-23 22:56:15,434 perturb_type: classwise
+2024-11-23 22:56:15,434 patch_location: center
+2024-11-23 22:56:15,434 poison_rate: 1.0
+2024-11-23 22:56:15,434 perturb_tensor_filepath: None
+2024-11-23 22:56:15,434 identity: race
+2024-11-23 22:56:15,434 jpeg: False
+2024-11-23 22:56:15,434 bdr: False
+2024-11-23 22:56:15,434 grayscale: False
+2024-11-23 22:56:15,434 poison_idxs_filepath: None
+2024-11-23 23:17:31,918 PyTorch Version: 2.5.1+cpu
+2024-11-23 23:17:31,924 num_classes: 10
+2024-11-23 23:17:31,924 epochs: 60
+2024-11-23 23:17:31,924 grad_clip: 5.0
+2024-11-23 23:17:31,924 log_frequency: 100
+2024-11-23 23:17:31,924 model: {'name': 'ResNet18', 'num_classes': 10}
+2024-11-23 23:17:31,924 criterion: {'name': 'CrossEntropyLoss'}
+2024-11-23 23:17:31,924 optimizer: {'name': 'SGD', 'lr': 0.1, 'weight_decay': 0.0005, 'momentum': 0.9}
+2024-11-23 23:17:31,924 scheduler: {'name': 'CosineAnnealingLR', 'T_max': '$epochs', 'eta_min': 0.0}
+2024-11-23 23:17:31,924 dataset: {'name': 'DatasetGenerator', 'train_batch_size': 128, 'eval_batch_size': 128}
+2024-11-23 23:17:31,925 seed: 0
+2024-11-23 23:17:31,925 version: resnet18
+2024-11-23 23:17:31,925 exp_name: test_exp
+2024-11-23 23:17:31,925 config_path: configs/cifar10
+2024-11-23 23:17:31,925 load_model: False
+2024-11-23 23:17:31,925 data_parallel: False
+2024-11-23 23:17:31,925 train: False
+2024-11-23 23:17:31,925 save_frequency: -1
+2024-11-23 23:17:31,925 train_face: False
+2024-11-23 23:17:31,925 train_portion: 1.0
+2024-11-23 23:17:31,925 train_batch_size: 128
+2024-11-23 23:17:31,925 eval_batch_size: 256
+2024-11-23 23:17:31,925 num_of_workers: 8
+2024-11-23 23:17:31,925 train_data_type: CIFAR10
+2024-11-23 23:17:31,925 test_data_type: CIFAR10
+2024-11-23 23:17:31,925 train_data_path: ../datasets
+2024-11-23 23:17:31,925 test_data_path: ../datasets
+2024-11-23 23:17:31,925 perturb_type: classwise
+2024-11-23 23:17:31,926 patch_location: center
+2024-11-23 23:17:31,926 poison_rate: 1.0
+2024-11-23 23:17:31,926 perturb_tensor_filepath: None
+2024-11-23 23:17:31,926 identity: race
+2024-11-23 23:17:31,926 jpeg: False
+2024-11-23 23:17:31,926 bdr: False
+2024-11-23 23:17:31,926 grayscale: False
+2024-11-23 23:17:31,926 poison_idxs_filepath: None
+2024-11-23 23:25:28,089 PyTorch Version: 2.5.1+cpu
+2024-11-23 23:25:28,091 num_classes: 10
+2024-11-23 23:25:28,092 epochs: 60
+2024-11-23 23:25:28,092 grad_clip: 5.0
+2024-11-23 23:25:28,092 log_frequency: 100
+2024-11-23 23:25:28,092 model: {'name': 'ResNet18', 'num_classes': 10}
+2024-11-23 23:25:28,092 criterion: {'name': 'CrossEntropyLoss'}
+2024-11-23 23:25:28,092 optimizer: {'name': 'SGD', 'lr': 0.1, 'weight_decay': 0.0005, 'momentum': 0.9}
+2024-11-23 23:25:28,092 scheduler: {'name': 'CosineAnnealingLR', 'T_max': '$epochs', 'eta_min': 0.0}
+2024-11-23 23:25:28,092 dataset: {'name': 'DatasetGenerator', 'train_batch_size': 128, 'eval_batch_size': 128}
+2024-11-23 23:25:28,092 seed: 0
+2024-11-23 23:25:28,092 version: resnet18
+2024-11-23 23:25:28,092 exp_name: test_exp
+2024-11-23 23:25:28,092 config_path: configs/cifar10
+2024-11-23 23:25:28,092 load_model: False
+2024-11-23 23:25:28,092 data_parallel: False
+2024-11-23 23:25:28,092 train: False
+2024-11-23 23:25:28,092 save_frequency: -1
+2024-11-23 23:25:28,093 train_face: False
+2024-11-23 23:25:28,093 train_portion: 1.0
+2024-11-23 23:25:28,093 train_batch_size: 128
+2024-11-23 23:25:28,093 eval_batch_size: 256
+2024-11-23 23:25:28,093 num_of_workers: 8
+2024-11-23 23:25:28,093 train_data_type: CIFAR10
+2024-11-23 23:25:28,093 test_data_type: CIFAR10
+2024-11-23 23:25:28,093 train_data_path: ../datasets
+2024-11-23 23:25:28,093 test_data_path: ../datasets
+2024-11-23 23:25:28,093 perturb_type: classwise
+2024-11-23 23:25:28,093 patch_location: center
+2024-11-23 23:25:28,093 poison_rate: 1.0
+2024-11-23 23:25:28,093 perturb_tensor_filepath: None
+2024-11-23 23:25:28,093 identity: race
+2024-11-23 23:25:28,093 jpeg: False
+2024-11-23 23:25:28,093 bdr: False
+2024-11-23 23:25:28,093 grayscale: False
+2024-11-23 23:25:28,093 poison_idxs_filepath: None
+2024-11-23 23:30:24,594 PyTorch Version: 2.5.1+cpu
+2024-11-23 23:30:24,597 num_classes: 10
+2024-11-23 23:30:24,597 epochs: 60
+2024-11-23 23:30:24,597 grad_clip: 5.0
+2024-11-23 23:30:24,597 log_frequency: 100
+2024-11-23 23:30:24,597 model: {'name': 'ResNet18', 'num_classes': 10}
+2024-11-23 23:30:24,597 criterion: {'name': 'CrossEntropyLoss'}
+2024-11-23 23:30:24,597 optimizer: {'name': 'SGD', 'lr': 0.1, 'weight_decay': 0.0005, 'momentum': 0.9}
+2024-11-23 23:30:24,597 scheduler: {'name': 'CosineAnnealingLR', 'T_max': '$epochs', 'eta_min': 0.0}
+2024-11-23 23:30:24,597 dataset: {'name': 'DatasetGenerator', 'train_batch_size': 128, 'eval_batch_size': 128}
+2024-11-23 23:30:24,597 seed: 0
+2024-11-23 23:30:24,597 version: resnet18
+2024-11-23 23:30:24,597 exp_name: test_exp
+2024-11-23 23:30:24,597 config_path: configs/cifar10
+2024-11-23 23:30:24,597 load_model: False
+2024-11-23 23:30:24,597 data_parallel: False
+2024-11-23 23:30:24,597 train: False
+2024-11-23 23:30:24,597 save_frequency: -1
+2024-11-23 23:30:24,597 train_face: False
+2024-11-23 23:30:24,597 train_portion: 1.0
+2024-11-23 23:30:24,597 train_batch_size: 128
+2024-11-23 23:30:24,597 eval_batch_size: 256
+2024-11-23 23:30:24,597 num_of_workers: 8
+2024-11-23 23:30:24,597 train_data_type: CIFAR10
+2024-11-23 23:30:24,597 test_data_type: CIFAR10
+2024-11-23 23:30:24,599 train_data_path: ../datasets
+2024-11-23 23:30:24,599 test_data_path: ../datasets
+2024-11-23 23:30:24,599 perturb_type: classwise
+2024-11-23 23:30:24,599 patch_location: center
+2024-11-23 23:30:24,599 poison_rate: 1.0
+2024-11-23 23:30:24,599 perturb_tensor_filepath: None
+2024-11-23 23:30:24,599 identity: race
+2024-11-23 23:30:24,599 jpeg: False
+2024-11-23 23:30:24,599 bdr: False
+2024-11-23 23:30:24,599 grayscale: False
+2024-11-23 23:30:24,599 poison_idxs_filepath: None
+2024-11-23 23:31:18,781 PyTorch Version: 2.5.1+cpu
+2024-11-23 23:31:18,783 num_classes: 10
+2024-11-23 23:31:18,784 epochs: 60
+2024-11-23 23:31:18,784 grad_clip: 5.0
+2024-11-23 23:31:18,784 log_frequency: 100
+2024-11-23 23:31:18,784 model: {'name': 'ResNet18', 'num_classes': 10}
+2024-11-23 23:31:18,784 criterion: {'name': 'CrossEntropyLoss'}
+2024-11-23 23:31:18,784 optimizer: {'name': 'SGD', 'lr': 0.1, 'weight_decay': 0.0005, 'momentum': 0.9}
+2024-11-23 23:31:18,784 scheduler: {'name': 'CosineAnnealingLR', 'T_max': '$epochs', 'eta_min': 0.0}
+2024-11-23 23:31:18,784 dataset: {'name': 'DatasetGenerator', 'train_batch_size': 128, 'eval_batch_size': 128}
+2024-11-23 23:31:18,784 seed: 0
+2024-11-23 23:31:18,784 version: resnet18
+2024-11-23 23:31:18,784 exp_name: test_exp
+2024-11-23 23:31:18,784 config_path: configs/cifar10
+2024-11-23 23:31:18,784 load_model: False
+2024-11-23 23:31:18,784 data_parallel: False
+2024-11-23 23:31:18,784 train: False
+2024-11-23 23:31:18,784 save_frequency: -1
+2024-11-23 23:31:18,784 train_face: False
+2024-11-23 23:31:18,784 train_portion: 1.0
+2024-11-23 23:31:18,784 train_batch_size: 128
+2024-11-23 23:31:18,784 eval_batch_size: 256
+2024-11-23 23:31:18,785 num_of_workers: 8
+2024-11-23 23:31:18,785 train_data_type: CIFAR10
+2024-11-23 23:31:18,785 test_data_type: CIFAR10
+2024-11-23 23:31:18,785 train_data_path: ../datasets
+2024-11-23 23:31:18,785 test_data_path: ../datasets
+2024-11-23 23:31:18,785 perturb_type: classwise
+2024-11-23 23:31:18,785 patch_location: center
+2024-11-23 23:31:18,785 poison_rate: 1.0
+2024-11-23 23:31:18,785 perturb_tensor_filepath: None
+2024-11-23 23:31:18,785 identity: race
+2024-11-23 23:31:18,785 jpeg: False
+2024-11-23 23:31:18,785 bdr: False
+2024-11-23 23:31:18,785 grayscale: False
+2024-11-23 23:31:18,785 poison_idxs_filepath: None
+2024-11-23 23:31:32,917 PyTorch Version: 2.5.1+cpu
+2024-11-23 23:31:32,920 num_classes: 10
+2024-11-23 23:31:32,920 epochs: 60
+2024-11-23 23:31:32,920 grad_clip: 5.0
+2024-11-23 23:31:32,920 log_frequency: 100
+2024-11-23 23:31:32,920 model: {'name': 'ResNet18', 'num_classes': 10}
+2024-11-23 23:31:32,920 criterion: {'name': 'CrossEntropyLoss'}
+2024-11-23 23:31:32,920 optimizer: {'name': 'SGD', 'lr': 0.1, 'weight_decay': 0.0005, 'momentum': 0.9}
+2024-11-23 23:31:32,920 scheduler: {'name': 'CosineAnnealingLR', 'T_max': '$epochs', 'eta_min': 0.0}
+2024-11-23 23:31:32,920 dataset: {'name': 'DatasetGenerator', 'train_batch_size': 128, 'eval_batch_size': 128}
+2024-11-23 23:31:32,921 seed: 0
+2024-11-23 23:31:32,921 version: resnet18
+2024-11-23 23:31:32,921 exp_name: test_exp
+2024-11-23 23:31:32,921 config_path: configs/cifar10
+2024-11-23 23:31:32,921 load_model: False
+2024-11-23 23:31:32,921 data_parallel: False
+2024-11-23 23:31:32,921 train: False
+2024-11-23 23:31:32,921 save_frequency: -1
+2024-11-23 23:31:32,921 train_face: False
+2024-11-23 23:31:32,921 train_portion: 1.0
+2024-11-23 23:31:32,921 train_batch_size: 128
+2024-11-23 23:31:32,921 eval_batch_size: 256
+2024-11-23 23:31:32,921 num_of_workers: 8
+2024-11-23 23:31:32,921 train_data_type: CIFAR10
+2024-11-23 23:31:32,921 test_data_type: CIFAR10
+2024-11-23 23:31:32,921 train_data_path: ../datasets
+2024-11-23 23:31:32,921 test_data_path: ../datasets
+2024-11-23 23:31:32,921 perturb_type: classwise
+2024-11-23 23:31:32,921 patch_location: center
+2024-11-23 23:31:32,921 poison_rate: 1.0
+2024-11-23 23:31:32,921 perturb_tensor_filepath: None
+2024-11-23 23:31:32,921 identity: race
+2024-11-23 23:31:32,921 jpeg: False
+2024-11-23 23:31:32,921 bdr: False
+2024-11-23 23:31:32,921 grayscale: False
+2024-11-23 23:31:32,921 poison_idxs_filepath: None
+2024-11-23 23:32:46,980 PyTorch Version: 2.5.1+cpu
+2024-11-23 23:32:46,983 num_classes: 10
+2024-11-23 23:32:46,983 epochs: 60
+2024-11-23 23:32:46,983 grad_clip: 5.0
+2024-11-23 23:32:46,983 log_frequency: 100
+2024-11-23 23:32:46,983 model: {'name': 'ResNet18', 'num_classes': 10}
+2024-11-23 23:32:46,983 criterion: {'name': 'CrossEntropyLoss'}
+2024-11-23 23:32:46,983 optimizer: {'name': 'SGD', 'lr': 0.1, 'weight_decay': 0.0005, 'momentum': 0.9}
+2024-11-23 23:32:46,983 scheduler: {'name': 'CosineAnnealingLR', 'T_max': '$epochs', 'eta_min': 0.0}
+2024-11-23 23:32:46,983 dataset: {'name': 'DatasetGenerator', 'train_batch_size': 128, 'eval_batch_size': 128}
+2024-11-23 23:32:46,984 seed: 0
+2024-11-23 23:32:46,984 version: resnet18
+2024-11-23 23:32:46,984 exp_name: test_exp
+2024-11-23 23:32:46,984 config_path: configs/cifar10
+2024-11-23 23:32:46,984 load_model: False
+2024-11-23 23:32:46,984 data_parallel: False
+2024-11-23 23:32:46,984 train: False
+2024-11-23 23:32:46,984 save_frequency: -1
+2024-11-23 23:32:46,984 train_face: False
+2024-11-23 23:32:46,984 train_portion: 1.0
+2024-11-23 23:32:46,984 train_batch_size: 128
+2024-11-23 23:32:46,984 eval_batch_size: 256
+2024-11-23 23:32:46,984 num_of_workers: 8
+2024-11-23 23:32:46,984 train_data_type: CIFAR10
+2024-11-23 23:32:46,984 test_data_type: CIFAR10
+2024-11-23 23:32:46,984 train_data_path: ../datasets
+2024-11-23 23:32:46,984 test_data_path: ../datasets
+2024-11-23 23:32:46,984 perturb_type: classwise
+2024-11-23 23:32:46,984 patch_location: center
+2024-11-23 23:32:46,984 poison_rate: 1.0
+2024-11-23 23:32:46,984 perturb_tensor_filepath: None
+2024-11-23 23:32:46,984 identity: race
+2024-11-23 23:32:46,984 jpeg: False
+2024-11-23 23:32:46,984 bdr: False
+2024-11-23 23:32:46,984 grayscale: False
+2024-11-23 23:32:46,984 poison_idxs_filepath: None
+2024-11-23 23:33:19,462 Training Dataset: Dataset CIFAR10
+    Number of datapoints: 50000
+    Root location: ../datasets
+    Split: Train
+    StandardTransform
+Transform: Compose(
+               RandomCrop(size=(32, 32), padding=4)
+               RandomHorizontalFlip(p=0.5)
+               ToTensor()
+           )
+2024-11-23 23:33:19,462 Test Dataset: Dataset CIFAR10
+    Number of datapoints: 10000
+    Root location: ../datasets
+    Split: Test
+    StandardTransform
+Transform: Compose(
+               ToTensor()
+           )
+2024-11-23 23:33:19,463 param size = 11.181642MB
+2024-11-23 23:52:48,912 PyTorch Version: 2.5.1+cpu
+2024-11-23 23:52:48,915 num_classes: 10
+2024-11-23 23:52:48,915 epochs: 60
+2024-11-23 23:52:48,915 grad_clip: 5.0
+2024-11-23 23:52:48,915 log_frequency: 100
+2024-11-23 23:52:48,915 model: {'name': 'ResNet18', 'num_classes': 10}
+2024-11-23 23:52:48,915 criterion: {'name': 'CrossEntropyLoss'}
+2024-11-23 23:52:48,915 optimizer: {'name': 'SGD', 'lr': 0.1, 'weight_decay': 0.0005, 'momentum': 0.9}
+2024-11-23 23:52:48,915 scheduler: {'name': 'CosineAnnealingLR', 'T_max': '$epochs', 'eta_min': 0.0}
+2024-11-23 23:52:48,915 dataset: {'name': 'DatasetGenerator', 'train_batch_size': 128, 'eval_batch_size': 128}
+2024-11-23 23:52:48,915 seed: 0
+2024-11-23 23:52:48,916 version: resnet18
+2024-11-23 23:52:48,916 exp_name: test_exp
+2024-11-23 23:52:48,916 config_path: configs/cifar10
+2024-11-23 23:52:48,916 load_model: False
+2024-11-23 23:52:48,916 data_parallel: False
+2024-11-23 23:52:48,916 train: False
+2024-11-23 23:52:48,916 save_frequency: -1
+2024-11-23 23:52:48,916 train_face: False
+2024-11-23 23:52:48,916 train_portion: 1.0
+2024-11-23 23:52:48,916 train_batch_size: 128
+2024-11-23 23:52:48,916 eval_batch_size: 256
+2024-11-23 23:52:48,916 num_of_workers: 8
+2024-11-23 23:52:48,916 train_data_type: CIFAR10
+2024-11-23 23:52:48,916 test_data_type: CIFAR10
+2024-11-23 23:52:48,916 train_data_path: ../datasets
+2024-11-23 23:52:48,916 test_data_path: ../datasets
+2024-11-23 23:52:48,916 perturb_type: classwise
+2024-11-23 23:52:48,916 patch_location: center
+2024-11-23 23:52:48,916 poison_rate: 1.0
+2024-11-23 23:52:48,916 perturb_tensor_filepath: None
+2024-11-23 23:52:48,916 identity: race
+2024-11-23 23:52:48,916 jpeg: False
+2024-11-23 23:52:48,916 bdr: False
+2024-11-23 23:52:48,916 grayscale: False
+2024-11-23 23:52:48,916 poison_idxs_filepath: None
+2024-11-23 23:52:50,474 Training Dataset: Dataset CIFAR10
+    Number of datapoints: 50000
+    Root location: ../datasets
+    Split: Train
+    StandardTransform
+Transform: Compose(
+               RandomCrop(size=(32, 32), padding=4)
+               RandomHorizontalFlip(p=0.5)
+               ToTensor()
+           )
+2024-11-23 23:52:50,474 Test Dataset: Dataset CIFAR10
+    Number of datapoints: 10000
+    Root location: ../datasets
+    Split: Test
+    StandardTransform
+Transform: Compose(
+               ToTensor()
+           )
+2024-11-23 23:52:50,476 param size = 11.181642MB
+2024-11-23 23:52:54,046 PyTorch Version: 2.5.1+cpu
+2024-11-23 23:52:54,049 num_classes: 10
+2024-11-23 23:52:54,049 epochs: 60
+2024-11-23 23:52:54,049 grad_clip: 5.0
+2024-11-23 23:52:54,049 log_frequency: 100
+2024-11-23 23:52:54,049 model: {'name': 'ResNet18', 'num_classes': 10}
+2024-11-23 23:52:54,049 criterion: {'name': 'CrossEntropyLoss'}
+2024-11-23 23:52:54,049 optimizer: {'name': 'SGD', 'lr': 0.1, 'weight_decay': 0.0005, 'momentum': 0.9}
+2024-11-23 23:52:54,049 scheduler: {'name': 'CosineAnnealingLR', 'T_max': '$epochs', 'eta_min': 0.0}
+2024-11-23 23:52:54,049 dataset: {'name': 'DatasetGenerator', 'train_batch_size': 128, 'eval_batch_size': 128}
+2024-11-23 23:52:57,621 PyTorch Version: 2.5.1+cpu
+2024-11-23 23:52:57,624 num_classes: 10
+2024-11-23 23:52:57,624 epochs: 60
+2024-11-23 23:52:57,625 grad_clip: 5.0
+2024-11-23 23:52:57,625 log_frequency: 100
+2024-11-23 23:52:57,625 model: {'name': 'ResNet18', 'num_classes': 10}
+2024-11-23 23:52:57,625 criterion: {'name': 'CrossEntropyLoss'}
+2024-11-23 23:52:57,625 optimizer: {'name': 'SGD', 'lr': 0.1, 'weight_decay': 0.0005, 'momentum': 0.9}
+2024-11-23 23:52:57,625 scheduler: {'name': 'CosineAnnealingLR', 'T_max': '$epochs', 'eta_min': 0.0}
+2024-11-23 23:52:57,625 dataset: {'name': 'DatasetGenerator', 'train_batch_size': 128, 'eval_batch_size': 128}
+2024-11-23 23:53:01,201 PyTorch Version: 2.5.1+cpu
+2024-11-23 23:53:01,203 num_classes: 10
+2024-11-23 23:53:01,204 epochs: 60
+2024-11-23 23:53:01,204 grad_clip: 5.0
+2024-11-23 23:53:01,204 log_frequency: 100
+2024-11-23 23:53:01,204 model: {'name': 'ResNet18', 'num_classes': 10}
+2024-11-23 23:53:01,204 criterion: {'name': 'CrossEntropyLoss'}
+2024-11-23 23:53:01,204 optimizer: {'name': 'SGD', 'lr': 0.1, 'weight_decay': 0.0005, 'momentum': 0.9}
+2024-11-23 23:53:01,204 scheduler: {'name': 'CosineAnnealingLR', 'T_max': '$epochs', 'eta_min': 0.0}
+2024-11-23 23:53:01,204 dataset: {'name': 'DatasetGenerator', 'train_batch_size': 128, 'eval_batch_size': 128}
+2024-11-23 23:53:04,715 PyTorch Version: 2.5.1+cpu
+2024-11-23 23:53:04,718 num_classes: 10
+2024-11-23 23:53:04,718 epochs: 60
+2024-11-23 23:53:04,718 grad_clip: 5.0
+2024-11-23 23:53:04,718 log_frequency: 100
+2024-11-23 23:53:04,718 model: {'name': 'ResNet18', 'num_classes': 10}
+2024-11-23 23:53:04,718 criterion: {'name': 'CrossEntropyLoss'}
+2024-11-23 23:53:04,718 optimizer: {'name': 'SGD', 'lr': 0.1, 'weight_decay': 0.0005, 'momentum': 0.9}
+2024-11-23 23:53:04,718 scheduler: {'name': 'CosineAnnealingLR', 'T_max': '$epochs', 'eta_min': 0.0}
+2024-11-23 23:53:04,718 dataset: {'name': 'DatasetGenerator', 'train_batch_size': 128, 'eval_batch_size': 128}
+2024-11-23 23:53:08,240 PyTorch Version: 2.5.1+cpu
+2024-11-23 23:53:08,243 num_classes: 10
+2024-11-23 23:53:08,244 epochs: 60
+2024-11-23 23:53:08,244 grad_clip: 5.0
+2024-11-23 23:53:08,244 log_frequency: 100
+2024-11-23 23:53:08,244 model: {'name': 'ResNet18', 'num_classes': 10}
+2024-11-23 23:53:08,244 criterion: {'name': 'CrossEntropyLoss'}
+2024-11-23 23:53:08,244 optimizer: {'name': 'SGD', 'lr': 0.1, 'weight_decay': 0.0005, 'momentum': 0.9}
+2024-11-23 23:53:08,244 scheduler: {'name': 'CosineAnnealingLR', 'T_max': '$epochs', 'eta_min': 0.0}
+2024-11-23 23:53:08,244 dataset: {'name': 'DatasetGenerator', 'train_batch_size': 128, 'eval_batch_size': 128}
+2024-11-23 23:53:11,818 PyTorch Version: 2.5.1+cpu
+2024-11-23 23:53:11,822 num_classes: 10
+2024-11-23 23:53:11,822 epochs: 60
+2024-11-23 23:53:11,822 grad_clip: 5.0
+2024-11-23 23:53:11,822 log_frequency: 100
+2024-11-23 23:53:11,822 model: {'name': 'ResNet18', 'num_classes': 10}
+2024-11-23 23:53:11,822 criterion: {'name': 'CrossEntropyLoss'}
+2024-11-23 23:53:11,822 optimizer: {'name': 'SGD', 'lr': 0.1, 'weight_decay': 0.0005, 'momentum': 0.9}
+2024-11-23 23:53:11,822 scheduler: {'name': 'CosineAnnealingLR', 'T_max': '$epochs', 'eta_min': 0.0}
+2024-11-23 23:53:11,822 dataset: {'name': 'DatasetGenerator', 'train_batch_size': 128, 'eval_batch_size': 128}
+2024-11-23 23:53:15,372 PyTorch Version: 2.5.1+cpu
+2024-11-23 23:53:15,376 num_classes: 10
+2024-11-23 23:53:15,376 epochs: 60
+2024-11-23 23:53:15,376 grad_clip: 5.0
+2024-11-23 23:53:15,376 log_frequency: 100
+2024-11-23 23:53:15,376 model: {'name': 'ResNet18', 'num_classes': 10}
+2024-11-23 23:53:15,376 criterion: {'name': 'CrossEntropyLoss'}
+2024-11-23 23:53:15,376 optimizer: {'name': 'SGD', 'lr': 0.1, 'weight_decay': 0.0005, 'momentum': 0.9}
+2024-11-23 23:53:15,376 scheduler: {'name': 'CosineAnnealingLR', 'T_max': '$epochs', 'eta_min': 0.0}
+2024-11-23 23:53:15,376 dataset: {'name': 'DatasetGenerator', 'train_batch_size': 128, 'eval_batch_size': 128}
+2024-11-23 23:53:18,935 PyTorch Version: 2.5.1+cpu
+2024-11-23 23:53:18,938 num_classes: 10
+2024-11-23 23:53:18,938 epochs: 60
+2024-11-23 23:53:18,939 grad_clip: 5.0
+2024-11-23 23:53:18,939 log_frequency: 100
+2024-11-23 23:53:18,939 model: {'name': 'ResNet18', 'num_classes': 10}
+2024-11-23 23:53:18,939 criterion: {'name': 'CrossEntropyLoss'}
+2024-11-23 23:53:18,939 optimizer: {'name': 'SGD', 'lr': 0.1, 'weight_decay': 0.0005, 'momentum': 0.9}
+2024-11-23 23:53:18,939 scheduler: {'name': 'CosineAnnealingLR', 'T_max': '$epochs', 'eta_min': 0.0}
+2024-11-23 23:53:18,939 dataset: {'name': 'DatasetGenerator', 'train_batch_size': 128, 'eval_batch_size': 128}
+2024-11-23 23:53:23,218 epoch=0	global_step=39	acc=0.0625	acc_avg=0.1000	acc5=0.4375	acc5_avg=0.5018	loss=2.2919	loss_avg=2.3032	time=47.08it/s
+2024-11-23 23:53:23,218 Eval Loss:2.3032	Eval acc: 10.00
+2024-11-23 23:53:23,232 Running Cost 0.00 Days 
+
