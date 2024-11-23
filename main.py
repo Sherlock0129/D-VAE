@@ -4,6 +4,12 @@ import os
 import shutil
 import time
 import numpy as np
+from omegaconf import OmegaConf
+from torch.optim.lr_scheduler import CosineAnnealingLR
+from torchvision.models import resnet18
+import torch.optim as optim
+import torch.nn as nn
+
 import dataset
 import mlconfig
 import torch
@@ -74,7 +80,14 @@ else:
 # Load Exp Configs
 config_file = os.path.join(args.config_path, args.version)+'.yaml'
 config = mlconfig.load(config_file)
-config.set_immutable()
+# Assuming `config` is your configuration object
+OmegaConf.set_readonly(config, True)  # Makes the configuration read-only
+# Verify
+try:
+    config.key1 = "new_value"  # This will raise a ReadOnlyConfigError
+except Exception as e:
+    print(e)  # Output: "Cannot modify read-only config"
+# config.set_immutable()
 for key in config:
     logger.info("%s: %s" % (key, config[key]))
 shutil.copyfile(config_file, os.path.join(exp_path, args.version+'.yaml'))
@@ -146,20 +159,56 @@ def train(starting_epoch, model, optimizer, scheduler, criterion, trainer, evalu
 
 
 def main():
-    model = config.model().to(device)
+    # model = config.model().to(device)
+    # Extract configuration
+    model_name = config.model.name
+    num_classes = config.model.num_classes
+
+    # Initialize the model
+    if model_name == "ResNet18":
+        model = resnet18(num_classes=num_classes).to(device)
+    else:
+        raise ValueError(f"Unsupported model: {model_name}")
     # print (model)
-    datasets_generator = config.dataset(train_data_type=args.train_data_type,
-                                        train_data_path=args.train_data_path,
-                                        test_data_type=args.test_data_type,
-                                        test_data_path=args.test_data_path,
-                                        train_batch_size=args.train_batch_size,
-                                        eval_batch_size=args.eval_batch_size,
-                                        num_of_workers=args.num_of_workers,
-                                        poison_rate=args.poison_rate,
-                                        perturb_type=args.perturb_type,
-                                        patch_location=args.patch_location,
-                                        perturb_tensor_filepath=args.perturb_tensor_filepath,
-                                        seed=args.seed, identity = args.identity, jpeg = args.jpeg, bdr = args.bdr, grayscale = args.grayscale)
+    # Extract dataset attributes
+    dataset_name = config.dataset.name
+    train_batch_size = config.dataset.train_batch_size
+    eval_batch_size = config.dataset.eval_batch_size
+
+    # Use these values to initialize the dataset generator
+    if dataset_name == "DatasetGenerator":
+        # Example: Replace with your actual dataset generator class
+        from dataset import DatasetGenerator
+        # Safely access num_of_workers with a default
+
+        datasets_generator = DatasetGenerator(
+            train_data_type=args.train_data_type,
+            train_data_path=args.train_data_path,
+            test_data_type=args.test_data_type,
+            test_data_path=args.test_data_path,
+            train_batch_size=args.train_batch_size,
+            eval_batch_size=args.eval_batch_size,
+            num_of_workers=args.num_of_workers,
+            poison_rate=args.poison_rate,
+            perturb_type=args.perturb_type,
+            patch_location=args.patch_location,
+            perturb_tensor_filepath=args.perturb_tensor_filepath,
+            seed=args.seed, identity = args.identity, jpeg = args.jpeg, bdr = args.bdr, grayscale = args.grayscale
+        )
+    else:
+        raise ValueError(f"Unsupported dataset: {dataset_name}")
+    # datasets_generator = config.dataset(train_data_type=args.train_data_type,
+    #                                     train_data_path=args.train_data_path,
+    #                                     test_data_type=args.test_data_type,
+    #                                     test_data_path=args.test_data_path,
+    #                                     train_batch_size=args.train_batch_size,
+    #                                     eval_batch_size=args.eval_batch_size,
+    #                                     num_of_workers=args.num_of_workers,
+    #                                     poison_rate=args.poison_rate,
+    #                                     perturb_type=args.perturb_type,
+    #                                     patch_location=args.patch_location,
+    #                                     perturb_tensor_filepath=args.perturb_tensor_filepath,
+    #                                     seed=args.seed, identity = args.identity, jpeg = args.jpeg, bdr = args.bdr, grayscale = args.grayscale)
     logger.info('Training Dataset: %s' % str(datasets_generator.datasets['train_dataset']))
     logger.info('Test Dataset: %s' % str(datasets_generator.datasets['test_dataset']))
     if 'Poison' in args.train_data_type:
@@ -182,9 +231,48 @@ def main():
                                                                train_drop_last=True)
 
     logger.info("param size = %fMB", util.count_parameters_in_MB(model))
-    optimizer = config.optimizer(model.parameters())
-    scheduler = config.scheduler(optimizer)
-    criterion = config.criterion()
+    # Extracting optimizer parameters from the config
+    optimizer_name = config.optimizer.name
+    lr = config.optimizer.lr
+    weight_decay = config.optimizer.weight_decay
+    momentum = config.optimizer.momentum
+
+    # Initialize optimizer based on config
+    if optimizer_name == 'SGD':
+        optimizer = optim.SGD(
+            model.parameters(),
+            lr=lr,
+            weight_decay=weight_decay,
+            momentum=momentum
+        )
+    elif optimizer_name == 'Adam':
+        optimizer = optim.Adam(
+            model.parameters(),
+            lr=lr,
+            weight_decay=weight_decay
+        )
+    else:
+        raise ValueError(f"Unsupported optimizer: {optimizer_name}")
+
+    # Extract scheduler parameters from the config
+    scheduler_name = config.scheduler.name
+    if scheduler_name == 'CosineAnnealingLR':
+        T_max = config.scheduler.T_max  # Can substitute $epochs with actual value from config
+        eta_min = config.scheduler.eta_min
+        scheduler = CosineAnnealingLR(optimizer, T_max=T_max, eta_min=eta_min)
+    else:
+        raise ValueError(f"Unsupported scheduler: {scheduler_name}")
+
+    # Extracting criterion parameters from the config
+    criterion_name = config.criterion.name
+    if criterion_name == 'CrossEntropyLoss':
+        criterion = nn.CrossEntropyLoss()
+    else:
+        raise ValueError(f"Unsupported criterion: {criterion_name}")
+
+    # optimizer = config.optimizer(model.parameters())
+    # scheduler = config.scheduler(optimizer)
+    # criterion = config.criterion()
     trainer = Trainer(criterion, data_loader, logger, config, target=train_target)
     evaluator = Evaluator(data_loader, logger, config)
 
